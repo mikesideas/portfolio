@@ -34,6 +34,8 @@ async function renderHomepage() {
 function renderCatGrid(projects) {
   const catGrid = document.getElementById('catGrid');
   if (!catGrid) return;
+  // Skip if already has static content
+  if (catGrid.querySelector('.cat-card')) return;
 
   /* Group projects by category */
   const catMap = {};
@@ -96,6 +98,8 @@ function renderCatGrid(projects) {
 function renderFeatured(projects) {
   const featGrid = document.getElementById('featuredGrid');
   if (!featGrid) return;
+  // Skip if already has static content
+  if (featGrid.querySelector('.featured-item')) return;
 
   const featured = projects.slice(0, 6);
 
