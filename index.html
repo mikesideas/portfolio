@@ -4,59 +4,73 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Mike's Ideas — Graphic Design Portfolio</title>
-  <meta name="description" content="Graphic design portfolio of Mike's Ideas — branding, illustration, and visual identity." />
-  <meta property="og:title" content="Mike's Ideas" />
-  <meta property="og:description" content="Graphic design portfolio" />
-  <meta property="og:url" content="https://mikesideas.com" />
-
+  <meta name="description" content="Graphic design portfolio — branding, illustration, and visual identity." />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@700;800&family=Inter:wght@300;400&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@600;700;800&family=Inter:wght@300;400;500&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="css/style.css" />
 </head>
 <body>
 
-  <!-- Page transition overlay -->
-  <div class="page-transition" id="pageTransition"></div>
+  <!-- ─── Sidebar ─── -->
+  <aside class="sidebar" id="sidebar">
+    <div class="sidebar-top">
+      <div class="logo">
+        <span class="logo-name">Mike's Ideas</span>
+        <span class="logo-sub">Graphic Design</span>
+      </div>
 
-  <!-- Cursor preview image (follows mouse on desktop) -->
-  <img id="cursor-preview" src="" alt="" aria-hidden="true" />
+      <nav class="filter-nav" id="filterNav">
+        <button class="filter-btn active" data-cat="all">All Work</button>
+        <!-- Category buttons injected by app.js -->
+      </nav>
+    </div>
 
-  <!-- ─── Header ─── -->
-  <header>
-    <a class="logo" href="index.html">Mike's Ideas</a>
-    <nav>
-      <a href="#work">Work</a>
-      <a href="about.html">About</a>
-      <a href="mailto:hello@mikesideas.com">Contact</a>
-    </nav>
+    <div class="sidebar-bottom">
+      <div class="sidebar-links">
+        <a href="about.html">About</a>
+        <a href="mailto:hello@mikesideas.com">Contact</a>
+        <a href="https://instagram.com/" target="_blank" rel="noopener">Instagram</a>
+        <a href="https://dribbble.com/" target="_blank" rel="noopener">Dribbble</a>
+      </div>
+      <p class="sidebar-copy">© <span id="year"></span> Mike's Ideas</p>
+    </div>
+  </aside>
+
+  <!-- ─── Mobile Header ─── -->
+  <header class="mobile-header">
+    <span class="logo-name">Mike's Ideas</span>
+    <button class="menu-toggle" id="menuToggle" aria-label="Menu">
+      <span></span><span></span><span></span>
+    </button>
   </header>
 
-  <!-- ─── Hero ─── -->
-  <section class="hero">
-    <p class="hero-eyebrow">Graphic Design &amp; Visual Identity</p>
-    <h1>Selected<br>Work.</h1>
-  </section>
-
-  <!-- ─── Projects ─── -->
-  <section class="projects-section" id="work">
-    <div class="filter-bar" id="filterBar">
+  <!-- ─── Main Grid ─── -->
+  <main class="main" id="main">
+    <div class="masonry-grid" id="masonryGrid">
       <!-- Injected by app.js -->
     </div>
-    <div id="projects-list">
-      <!-- Injected by app.js -->
-    </div>
-  </section>
+    <p class="empty-state" id="emptyState" style="display:none">
+      No projects yet — upload images to a category folder on GitHub.
+    </p>
+  </main>
 
-  <!-- ─── Footer ─── -->
-  <footer>
-    <span>© <span id="year"></span> Mike's Ideas</span>
-    <div class="footer-links">
-      <a href="https://instagram.com/" target="_blank" rel="noopener">Instagram</a>
-      <a href="https://dribbble.com/" target="_blank" rel="noopener">Dribbble</a>
-      <a href="mailto:hello@mikesideas.com">Email</a>
+  <!-- ─── Lightbox ─── -->
+  <div class="lightbox" id="lightbox" role="dialog" aria-modal="true">
+    <button class="lightbox-close" id="lightboxClose" aria-label="Close">✕</button>
+    <button class="lightbox-prev" id="lightboxPrev" aria-label="Previous">‹</button>
+    <button class="lightbox-next" id="lightboxNext" aria-label="Next">›</button>
+    <div class="lightbox-inner">
+      <div class="lightbox-img-wrap">
+        <img class="lightbox-img" id="lightboxImg" src="" alt="" />
+      </div>
+      <div class="lightbox-info">
+        <span class="lightbox-category" id="lightboxCategory"></span>
+        <h2 class="lightbox-title" id="lightboxTitle"></h2>
+        <p class="lightbox-desc" id="lightboxDesc"></p>
+      </div>
     </div>
-  </footer>
+  </div>
 
   <script src="js/app.js"></script>
 </body>

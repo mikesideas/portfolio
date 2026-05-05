@@ -4,109 +4,48 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>About — Mike's Ideas</title>
-
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Syne:wght@700;800&family=Inter:wght@300;400&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="css/style.css" />
-
-  <style>
-    .about-wrap {
-      padding: 180px 48px 140px;
-      max-width: 720px;
-    }
-    .about-wrap h1 {
-      font-family: var(--font-display);
-      font-size: clamp(40px, 7vw, 96px);
-      font-weight: 800;
-      letter-spacing: -0.04em;
-      line-height: 0.92;
-      margin-bottom: 48px;
-    }
-    .about-wrap p {
-      font-size: 18px;
-      line-height: 1.8;
-      color: #aaa;
-      margin-bottom: 24px;
-    }
-    .about-wrap a {
-      color: var(--fg);
-      border-bottom: 1px solid #333;
-      padding-bottom: 1px;
-      transition: border-color 0.2s;
-    }
-    .about-wrap a:hover {
-      border-color: var(--fg);
-    }
-    .about-contact {
-      margin-top: 64px;
-      padding-top: 40px;
-      border-top: 1px solid var(--border);
-    }
-    .about-contact p {
-      font-size: 13px;
-      letter-spacing: 0.1em;
-      text-transform: uppercase;
-      color: var(--muted);
-      margin-bottom: 12px;
-    }
-    .about-contact a {
-      font-family: var(--font-display);
-      font-size: clamp(28px, 4vw, 52px);
-      font-weight: 700;
-      letter-spacing: -0.02em;
-      border: none;
-      color: var(--fg);
-      transition: opacity 0.2s;
-    }
-    .about-contact a:hover {
-      opacity: 0.6;
-    }
-    @media (max-width: 768px) {
-      .about-wrap { padding: 140px 24px 100px; }
-    }
-  </style>
 </head>
 <body>
 
-  <!-- ─── Header ─── -->
-  <header>
-    <a class="logo" href="index.html">Mike's Ideas</a>
-    <nav>
-      <a href="index.html">Work</a>
-      <a href="mailto:hello@mikesideas.com">Contact</a>
-    </nav>
-  </header>
-
-  <!-- ─── About ─── -->
-  <div class="about-wrap">
-    <h1>About<br>Mike.</h1>
-
-    <p>
-      I'm a graphic designer focused on branding, illustration, and visual identity.
-      <!-- Edit this paragraph to tell your story. -->
-    </p>
-
-    <p>
-      I work with clients across [industries/regions] to create work that's
-      distinctive, considered, and built to last.
-    </p>
-
-    <div class="about-contact">
-      <p>Get in touch</p>
-      <a href="mailto:hello@mikesideas.com">hello@mikesideas.com</a>
+  <aside class="sidebar">
+    <div class="sidebar-top">
+      <div class="logo">
+        <a href="index.html" class="logo-name">Mike's Ideas</a>
+        <span class="logo-sub">Graphic Design</span>
+      </div>
+      <nav class="filter-nav">
+        <a href="index.html" class="filter-btn">← All Work</a>
+      </nav>
     </div>
-  </div>
-
-  <!-- ─── Footer ─── -->
-  <footer>
-    <span>© <script>document.write(new Date().getFullYear())</script> Mike's Ideas</span>
-    <div class="footer-links">
-      <a href="https://instagram.com/" target="_blank" rel="noopener">Instagram</a>
-      <a href="https://dribbble.com/" target="_blank" rel="noopener">Dribbble</a>
-      <a href="mailto:hello@mikesideas.com">Email</a>
+    <div class="sidebar-bottom">
+      <div class="sidebar-links">
+        <a href="mailto:hello@mikesideas.com">Contact</a>
+        <a href="https://instagram.com/" target="_blank" rel="noopener">Instagram</a>
+        <a href="https://dribbble.com/" target="_blank" rel="noopener">Dribbble</a>
+      </div>
+      <p class="sidebar-copy">© <script>document.write(new Date().getFullYear())</script> Mike's Ideas</p>
     </div>
-  </footer>
+  </aside>
+
+  <main class="main">
+    <div class="about-wrap">
+      <h1>About<br>Mike.</h1>
+      <p>
+        I'm a graphic designer focused on branding, illustration, and visual identity.
+      </p>
+      <p>
+        I work with clients to create work that's distinctive, considered, and built to last.
+      </p>
+      <div class="about-contact">
+        <p>Get in touch</p>
+        <a href="mailto:hello@mikesideas.com">hello@mikesideas.com</a>
+      </div>
+    </div>
+  </main>
 
 </body>
 </html>
