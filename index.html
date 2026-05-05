@@ -3,8 +3,11 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Mike's Ideas — Graphic Design</title>
-  <meta name="description" content="Graphic design portfolio — branding, illustration, and visual identity." />
+  <title>Mike's Ideas — Graphic Design & Visual Identity</title>
+  <meta name="description" content="Premium graphic design portfolio. Branding, concert flyers, logos, merch, dispensary labels, websites & event graphics." />
+  <meta property="og:title" content="Mike's Ideas" />
+  <meta property="og:description" content="Graphic design, branding & visual identity." />
+  <meta property="og:url" content="https://mikesideas.com" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Syne:wght@700;800&family=Inter:wght@300;400;500&display=swap" rel="stylesheet" />
@@ -12,67 +15,123 @@
 </head>
 <body>
 
-  <!-- ─── Header ─── -->
-  <header class="header">
-    <a class="header-logo" href="index.html">Mike's Ideas</a>
-    <nav class="header-nav">
+  <!-- ─── Navigation ─── -->
+  <nav class="nav" id="nav">
+    <a class="nav-logo" href="index.html">Mike's Ideas</a>
+    <div class="nav-links">
+      <a href="work.html">Work</a>
       <a href="about.html">About</a>
-      <a href="mailto:hello@mikesideas.com">Contact ↗</a>
-    </nav>
-  </header>
+      <a href="contact.html" class="nav-cta">Get in Touch</a>
+    </div>
+    <button class="nav-hamburger" id="hamburger" aria-label="Menu">
+      <span></span><span></span><span></span>
+    </button>
+  </nav>
+
+  <!-- Mobile Menu -->
+  <div class="nav-mobile" id="navMobile">
+    <a href="work.html">Work</a>
+    <a href="about.html">About</a>
+    <a href="contact.html">Contact</a>
+  </div>
 
   <!-- ─── Hero ─── -->
   <section class="hero">
+    <p class="hero-tag">Mike's Ideas — Creative Studio</p>
     <h1 class="hero-title">
-      <span class="hero-line">Design.</span>
-      <span class="hero-line">Identity.</span>
-      <span class="hero-line hero-muted">Everything Else.</span>
+      <!-- UPDATE: Change these lines to adjust the hero headline -->
+      <span>Graphic</span>
+      <span>Design.</span>
+      <span>Built Different.</span>
     </h1>
-    <p class="hero-desc">Graphic design, branding &amp; visual identity.</p>
+    <div class="hero-bottom">
+      <p class="hero-statement">
+        <!-- UPDATE: Edit this tagline -->
+        Branding, events, cannabis, merchandise, and everything in between.
+        Work that gets noticed.
+      </p>
+      <div class="hero-actions">
+        <a href="work.html" class="btn btn-primary">View Work ↓</a>
+        <a href="contact.html" class="btn btn-ghost">Let's Talk</a>
+      </div>
+    </div>
+    <div class="hero-scroll">
+      <span>Scroll</span>
+      <div class="hero-scroll-line"></div>
+    </div>
   </section>
 
-  <!-- ─── Filter Bar ─── -->
-  <div class="filters" id="filters">
-    <div class="filters-inner" id="filtersInner">
-      <button class="filter-chip active" data-cat="all">All</button>
-      <!-- dynamic -->
+  <!-- ─── Category Grid ─── -->
+  <section class="section">
+    <div class="section-header reveal">
+      <h2 class="section-title">Work</h2>
+      <a href="work.html" class="section-link">View All →</a>
     </div>
-  </div>
+    <div class="cat-grid" id="catGrid">
+      <!-- Injected by home.js -->
+      <!-- Placeholder skeleton shown until JS loads -->
+      <div class="cat-card"><div class="cat-card-placeholder"><span>+</span></div></div>
+      <div class="cat-card"><div class="cat-card-placeholder"><span>+</span></div></div>
+      <div class="cat-card"><div class="cat-card-placeholder"><span>+</span></div></div>
+      <div class="cat-card"><div class="cat-card-placeholder"><span>+</span></div></div>
+      <div class="cat-card"><div class="cat-card-placeholder"><span>+</span></div></div>
+      <div class="cat-card"><div class="cat-card-placeholder"><span>+</span></div></div>
+    </div>
+  </section>
 
-  <!-- ─── Grid ─── -->
-  <main class="grid" id="grid">
-    <!-- Injected by app.js -->
-  </main>
+  <!-- ─── Featured Work ─── -->
+  <section class="section" style="padding-top:0">
+    <div class="section-header reveal">
+      <h2 class="section-title">Recent</h2>
+      <a href="work.html" class="section-link">See More →</a>
+    </div>
+    <div class="featured-grid" id="featuredGrid">
+      <!-- Injected by home.js -->
+    </div>
+  </section>
 
-  <p class="empty-state" id="emptyState" style="display:none">
-    No projects yet — upload images to a category folder on GitHub.
-  </p>
+  <!-- ─── About Teaser ─── -->
+  <section class="about-teaser">
+    <div>
+      <h2 class="about-teaser-title reveal">
+        <!-- UPDATE: Edit this tagline -->
+        Creative work.<br>Real results.
+      </h2>
+      <a href="about.html" class="btn btn-ghost reveal reveal-delay-1">About Me →</a>
+    </div>
+    <div>
+      <p class="about-teaser-text reveal">
+        <!-- UPDATE: Edit this bio snippet -->
+        Years of design experience across concerts, brands, cannabis, merchandise, and digital media. Every project is an opportunity to make something worth remembering.
+      </p>
+      <div class="about-teaser-tags reveal reveal-delay-1">
+        <!-- UPDATE: Edit these skill tags -->
+        <span class="tag">Branding</span>
+        <span class="tag">Event Flyers</span>
+        <span class="tag">Logo Design</span>
+        <span class="tag">Web Design</span>
+        <span class="tag">Merch</span>
+        <span class="tag">Cannabis Labels</span>
+        <span class="tag">Event Graphics</span>
+      </div>
+    </div>
+  </section>
 
   <!-- ─── Footer ─── -->
   <footer class="footer">
-    <span>© <span id="year"></span> Mike's Ideas</span>
-    <div class="footer-links">
-      <a href="https://instagram.com/" target="_blank" rel="noopener">Instagram ↗</a>
-      <a href="https://dribbble.com/" target="_blank" rel="noopener">Dribbble ↗</a>
-      <a href="mailto:hello@mikesideas.com">hello@mikesideas.com</a>
+    <span class="footer-logo">Mike's Ideas</span>
+    <nav class="footer-nav">
+      <a href="work.html">Work</a>
+      <a href="about.html">About</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+    <!-- UPDATE: Update social links and email -->
+    <div class="footer-right">
+      <p>© <span id="year"></span> Mike's Ideas</p>
     </div>
   </footer>
 
-  <!-- ─── Lightbox ─── -->
-  <div class="lightbox" id="lightbox">
-    <button class="lb-close" id="lbClose">✕</button>
-    <button class="lb-arrow lb-prev" id="lbPrev">&#8592;</button>
-    <button class="lb-arrow lb-next" id="lbNext">&#8594;</button>
-    <div class="lb-stage" id="lbStage">
-      <img class="lb-img" id="lbImg" src="" alt="" />
-    </div>
-    <div class="lb-meta">
-      <span class="lb-cat" id="lbCat"></span>
-      <strong class="lb-title" id="lbTitle"></strong>
-      <span class="lb-desc" id="lbDesc"></span>
-    </div>
-  </div>
-
   <script src="js/app.js"></script>
+  <script src="js/home.js"></script>
 </body>
 </html>

@@ -1,0 +1,62 @@
+{
+  "site": {
+    "name": "Mike's Ideas",
+    "tagline": "Graphic Design · Branding · Visual Identity",
+    "statement": "Years of work. Across industries. For people who give a damn.",
+    "email": "hello@mikesideas.com",
+    "instagram": "https://instagram.com/",
+    "dribbble": "https://dribbble.com/",
+    "location": "USA"
+  },
+
+  "categories": {
+    "concert-flyers": {
+      "label": "Concert Flyers",
+      "description": "Event posters & promotional flyers for concerts, shows & festivals."
+    },
+    "flyers": {
+      "label": "Concert Flyers",
+      "description": "Event posters & promotional flyers for concerts, shows & festivals."
+    },
+    "logos": {
+      "label": "Logos & Branding",
+      "description": "Brand identities, logo systems & visual language."
+    },
+    "branding": {
+      "label": "Logos & Branding",
+      "description": "Brand identities, logo systems & visual language."
+    },
+    "websites": {
+      "label": "Websites",
+      "description": "Web design & digital experiences."
+    },
+    "merch": {
+      "label": "T-Shirts & Merch",
+      "description": "Apparel graphics, merchandise & wearable design."
+    },
+    "dispensary-labels": {
+      "label": "Dispensary Labels",
+      "description": "Cannabis packaging, dispensary labels & product design."
+    },
+    "event-graphics": {
+      "label": "Event Graphics",
+      "description": "Visual assets for events, activations & experiences."
+    },
+    "product-design": {
+      "label": "Product Design",
+      "description": "Product visuals & industrial design concepts."
+    },
+    "mech-design": {
+      "label": "Mech Design",
+      "description": "Mechanical & technical design work."
+    },
+    "lighting-design": {
+      "label": "Lighting Design",
+      "description": "Lighting concepts & visual setups."
+    },
+    "everything-else": {
+      "label": "Other Work",
+      "description": "Everything else that doesn't fit a box."
+    }
+  }
+}
