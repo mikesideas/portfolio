@@ -241,8 +241,8 @@ button { cursor: pointer; border: none; background: none; font: inherit; color: 
    ───────────────────────────────────── */
 
 .hero {
-  min-height: 100vh;
-  padding: calc(var(--nav-h) + 60px) var(--pad-x) 80px;
+  min-height: 100svh;
+  padding: calc(var(--nav-h) + 60px) var(--pad-x) 100px;
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
@@ -281,15 +281,33 @@ button { cursor: pointer; border: none; background: none; font: inherit; color: 
   50%       { transform: translateY(-30px) scale(1.05); }
 }
 
+.hero-eyebrow {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 28px;
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fade-up 0.8s var(--ease) 0.2s forwards;
+}
+
 .hero-tag {
   font-size: 11px;
   letter-spacing: 0.2em;
   text-transform: uppercase;
   color: var(--accent);
-  margin-bottom: 28px;
-  opacity: 0;
-  transform: translateY(20px);
-  animation: fade-up 0.8s var(--ease) 0.2s forwards;
+}
+
+.hero-divider {
+  color: var(--fg-dim);
+  font-size: 11px;
+}
+
+.hero-tag-sub {
+  font-size: 11px;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--fg-dim);
 }
 
 .hero-title {
@@ -310,7 +328,8 @@ button { cursor: pointer; border: none; background: none; font: inherit; color: 
 
 .hero-title span:nth-child(1) { animation-delay: 0.35s; }
 .hero-title span:nth-child(2) { animation-delay: 0.5s; }
-.hero-title span:nth-child(3) { animation-delay: 0.65s; color: var(--fg-dim); }
+.hero-title span:nth-child(3),
+.hero-title .hero-title-sub { animation-delay: 0.65s; color: var(--fg-dim); }
 
 .hero-bottom {
   display: flex;
@@ -337,36 +356,28 @@ button { cursor: pointer; border: none; background: none; font: inherit; color: 
 /* Scroll indicator */
 .hero-scroll {
   position: absolute;
-  bottom: 40px;
-  left: 50%;
-  transform: translateX(-50%);
+  bottom: 32px;
+  left: var(--pad-x);
   display: flex;
   flex-direction: column;
-  align-items: center;
-  gap: 8px;
+  align-items: flex-start;
+  gap: 0;
   opacity: 0;
   animation: fade-up 1s var(--ease) 1.4s forwards;
 }
 
-.hero-scroll span {
-  font-size: 10px;
-  letter-spacing: 0.15em;
-  text-transform: uppercase;
-  color: var(--fg-dim);
-}
-
 .hero-scroll-line {
   width: 1px;
-  height: 48px;
-  background: linear-gradient(to bottom, var(--border-light), transparent);
-  animation: scroll-line 2s ease-in-out 2s infinite;
+  height: 56px;
+  background: linear-gradient(to bottom, var(--accent), transparent);
+  animation: scroll-line 2.4s ease-in-out 2s infinite;
 }
 
 @keyframes scroll-line {
-  0%   { transform: scaleY(1); transform-origin: top; }
-  50%  { transform: scaleY(0); transform-origin: top; }
-  51%  { transform: scaleY(0); transform-origin: bottom; }
-  100% { transform: scaleY(1); transform-origin: bottom; }
+  0%   { transform: scaleY(1) translateY(0); transform-origin: top; opacity: 1; }
+  50%  { transform: scaleY(0) translateY(0); transform-origin: top; opacity: 0.3; }
+  51%  { transform: scaleY(0) translateY(0); transform-origin: bottom; opacity: 0.3; }
+  100% { transform: scaleY(1) translateY(0); transform-origin: bottom; opacity: 1; }
 }
 
 
@@ -436,11 +447,13 @@ button { cursor: pointer; border: none; background: none; font: inherit; color: 
 }
 
 .cat-card-img {
+  position: absolute;
+  inset: 0;
   width: 100%;
   height: 100%;
   object-fit: cover;
   transition: transform var(--slow) var(--ease), filter var(--slow) ease;
-  filter: brightness(0.6);
+  filter: brightness(0.65);
 }
 
 .cat-card:hover .cat-card-img {
@@ -556,14 +569,34 @@ button { cursor: pointer; border: none; background: none; font: inherit; color: 
 }
 
 .featured-item img {
+  position: absolute;
+  inset: 0;
   width: 100%;
   height: 100%;
   object-fit: cover;
-  transition: transform var(--slow) var(--ease), opacity 0.4s;
+  transition: transform var(--slow) var(--ease), opacity 0.5s;
   opacity: 0;
 }
 
 .featured-item img.loaded { opacity: 1; }
+
+/* Shimmer while loading */
+.featured-item::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(90deg, var(--surface) 25%, var(--surface2) 50%, var(--surface) 75%);
+  background-size: 200% 100%;
+  animation: shimmer 1.6s infinite;
+  z-index: 0;
+}
+.featured-item img.loaded ~ * { z-index: 2; }
+.featured-item img.loaded + .featured-overlay,
+.featured-item img.loaded { z-index: 1; }
+@keyframes shimmer {
+  0%   { background-position: 200% 0; }
+  100% { background-position: -200% 0; }
+}
 .featured-item:hover img { transform: scale(1.05); }
 
 .featured-overlay {
@@ -619,6 +652,7 @@ button { cursor: pointer; border: none; background: none; font: inherit; color: 
   grid-template-columns: 1fr 1fr;
   gap: 80px;
   align-items: center;
+  background: linear-gradient(135deg, rgba(200,169,110,0.03) 0%, transparent 60%);
 }
 
 .about-teaser-title {
@@ -1200,16 +1234,19 @@ button { cursor: pointer; border: none; background: none; font: inherit; color: 
   .nav-hamburger { display: flex; }
 
   /* Fix text overflow on mobile */
-  .hero-title { font-size: clamp(36px, 11vw, 72px); overflow: hidden; }
-  .hero-title span { white-space: nowrap; overflow: hidden; text-overflow: clip; }
+  .hero-title { font-size: clamp(32px, 10vw, 72px); overflow: hidden; }
+  .hero-title span { white-space: normal; word-break: break-word; overflow: visible; }
+  .hero-title .hero-title-sub { font-size: clamp(24px, 7.5vw, 56px); }
   .page-title { font-size: clamp(36px, 11vw, 72px); overflow: hidden; }
   .about-hero-title { font-size: clamp(36px, 11vw, 72px); overflow: hidden; }
   .contact-hero-title { font-size: clamp(36px, 11vw, 72px); overflow: hidden; }
   .contact-email { font-size: clamp(15px, 4.5vw, 26px); word-break: break-all; }
   .section-title { font-size: clamp(26px, 7vw, 44px); }
 
-  .hero { padding-bottom: 60px; min-height: auto; padding-top: calc(var(--nav-h) + 40px); overflow: hidden; }
+  .hero { padding-bottom: 80px; min-height: 100svh; padding-top: calc(var(--nav-h) + 40px); overflow: hidden; }
+  .hero-eyebrow { margin-bottom: 20px; }
   .hero-bottom { flex-direction: column; align-items: flex-start; gap: 24px; }
+  .hero-scroll { left: var(--pad-x-sm); bottom: 28px; }
 
   .cat-grid { grid-template-columns: 1fr; }
   .cat-card:first-child { grid-column: span 1; }

@@ -58,7 +58,7 @@ function renderCatGrid(projects) {
       <a class="cat-card reveal${i === 0 ? '' : ` reveal-delay-${Math.min(i, 3)}`}" 
          href="work.html?cat=${cat}">
         ${cover
-          ? `<img class="cat-card-img" src="${cover}" alt="${info.label}" loading="lazy" />`
+          ? `<img class="cat-card-img" src="${cover}" alt="${info.label}" />`
           : `<div class="cat-card-placeholder"><span>${info.emoji}</span></div>`}
         <div class="cat-card-info">
           <div class="cat-card-label">${items.length} project${items.length !== 1 ? 's' : ''}</div>
@@ -79,8 +79,17 @@ function renderCatGrid(projects) {
 
   /* Load images */
   catGrid.querySelectorAll('img').forEach(img => {
-    if (img.complete) img.classList.add('loaded');
-    else img.addEventListener('load', () => img.classList.add('loaded'));
+    const onLoad = () => img.classList.add('loaded');
+    const onErr  = () => {
+      const ph = document.createElement('div');
+      ph.className = 'cat-card-placeholder';
+      const info = getCatInfo(img.closest('a')?.href?.split('cat=')[1] || '');
+      ph.innerHTML = `<span>${info.emoji || '✦'}</span>`;
+      img.replaceWith(ph);
+    };
+    if (img.complete && img.naturalWidth > 0) onLoad();
+    else if (img.complete) onErr();
+    else { img.addEventListener('load', onLoad); img.addEventListener('error', onErr); }
   });
 }
 
@@ -112,8 +121,9 @@ function renderFeatured(projects) {
   });
 
   featGrid.querySelectorAll('img').forEach(img => {
-    if (img.complete) img.classList.add('loaded');
-    else img.addEventListener('load', () => img.classList.add('loaded'));
+    const onLoad = () => img.classList.add('loaded');
+    if (img.complete && img.naturalWidth > 0) onLoad();
+    else { img.addEventListener('load', onLoad); img.addEventListener('error', () => img.closest('.featured-item')?.remove()); }
   });
 }
 
