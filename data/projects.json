@@ -1,5 +1,31 @@
 [
   {
+    "id": "flyers--fleetwood revel",
+    "title": "Fleetwood Revel",
+    "categories": [
+      "flyers"
+    ],
+    "year": "2026",
+    "description": "",
+    "cover": "projects/flyers/fleetwood revel.png",
+    "images": [
+      "projects/flyers/fleetwood revel.png"
+    ]
+  },
+  {
+    "id": "flyers--Pink Freud Tumbleroot 3-6-26 11x17",
+    "title": "Pink Freud Tumbleroot 3 6 26 11x17",
+    "categories": [
+      "flyers"
+    ],
+    "year": "2026",
+    "description": "",
+    "cover": "projects/flyers/Pink Freud Tumbleroot 3-6-26 11x17.png",
+    "images": [
+      "projects/flyers/Pink Freud Tumbleroot 3-6-26 11x17.png"
+    ]
+  },
+  {
     "id": "websites--staymotavated-com",
     "title": "Stay Motavated",
     "categories": [

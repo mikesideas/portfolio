@@ -1,0 +1,35 @@
+name: Auto-generate portfolio manifest
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'projects/**'
+
+permissions:
+  contents: write
+
+jobs:
+  generate:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+
+      - name: Generate projects.json
+        run: node scripts/generate-manifest.js
+
+      - name: Commit manifest
+        run: |
+          git config user.name "Portfolio Bot"
+          git config user.email "bot@mikesideas.com"
+          git add data/projects.json
+          git diff --staged --quiet || git commit -m "Auto-update portfolio manifest [skip ci]"
+          git push
