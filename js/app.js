@@ -59,61 +59,81 @@ if (isIndex) {
   /* Render project list */
   async function renderIndex() {
     const projects = await loadProjects();
-    const list = document.getElementById('projects-list');
+    const list     = document.getElementById('projects-list');
+    const filterBar = document.getElementById('filterBar');
 
     if (!projects.length) {
       list.innerHTML = '<p style="color:#4a4a4a;padding:48px 0;">No projects yet — add entries to data/projects.json</p>';
       return;
     }
 
-    list.innerHTML = projects.map((p, i) => `
-      <div class="project-item" data-cover="${p.cover}" data-url="project.html?id=${p.id}">
-        <span class="project-index">0${i + 1}</span>
-        <div class="project-main">
-          <span class="project-title">${p.title}</span>
-          <div class="project-meta">
-            <div class="project-categories">
-              ${p.categories.map(c => `<span class="project-category">${c}</span>`).join('')}
-            </div>
-            <span class="project-year">${p.year}</span>
-          </div>
-        </div>
-        <span class="project-arrow">→</span>
-      </div>
+    /* Build category list from all projects */
+    const allCategories = ['all', ...new Set(projects.flatMap(p => p.categories))];
+    let activeFilter = 'all';
+
+    /* Render filter buttons */
+    filterBar.innerHTML = allCategories.map(cat => `
+      <button class="filter-btn${cat === 'all' ? ' active' : ''}" data-cat="${cat}">
+        ${cat === 'all' ? 'All' : cat}
+      </button>
     `).join('');
 
-    /* Bind events */
-    document.querySelectorAll('.project-item').forEach(item => {
-      const cover = item.dataset.cover;
-      const url   = item.dataset.url;
+    /* Render all project items */
+    function renderItems(filter) {
+      const filtered = filter === 'all'
+        ? projects
+        : projects.filter(p => p.categories.includes(filter));
 
-      /* Hover — show preview */
-      item.addEventListener('mouseenter', () => {
-        if (cover) {
-          preview.src = cover;
-          preview.classList.add('visible');
-        }
-      });
+      list.innerHTML = filtered.map((p, i) => `
+        <div class="project-item" data-cover="${p.cover}" data-url="project.html?id=${p.id}" data-categories="${p.categories.join(',')}"
+             style="opacity:0;transform:translateY(12px);transition:opacity 0.4s ease ${i * 0.06}s,transform 0.4s ease ${i * 0.06}s">
+          <span class="project-index">${String(i + 1).padStart(2, '0')}</span>
+          <div class="project-main">
+            <span class="project-title">${p.title}</span>
+            <div class="project-meta">
+              <div class="project-categories">
+                ${p.categories.map(c => `<span class="project-category">${c}</span>`).join('')}
+              </div>
+              <span class="project-year">${p.year}</span>
+            </div>
+          </div>
+          <span class="project-arrow">→</span>
+        </div>
+      `).join('');
 
-      item.addEventListener('mouseleave', () => {
-        preview.classList.remove('visible');
-      });
-
-      /* Click — navigate */
-      item.addEventListener('click', () => navigateTo(url));
-    });
-
-    /* Entrance animation */
-    requestAnimationFrame(() => {
-      document.querySelectorAll('.project-item').forEach((el, i) => {
-        el.style.opacity = '0';
-        el.style.transform = 'translateY(16px)';
-        el.style.transition = `opacity 0.5s ease ${i * 0.07}s, transform 0.5s ease ${i * 0.07}s`;
-        requestAnimationFrame(() => {
-          el.style.opacity = '1';
-          el.style.transform = 'translateY(0)';
+      /* Animate in */
+      requestAnimationFrame(() => {
+        document.querySelectorAll('.project-item').forEach(el => {
+          requestAnimationFrame(() => {
+            el.style.opacity = '1';
+            el.style.transform = 'translateY(0)';
+          });
         });
       });
+
+      /* Bind hover + click */
+      document.querySelectorAll('.project-item').forEach(item => {
+        const cover = item.dataset.cover;
+        const url   = item.dataset.url;
+
+        item.addEventListener('mouseenter', () => {
+          if (cover) { preview.src = cover; preview.classList.add('visible'); }
+        });
+        item.addEventListener('mouseleave', () => preview.classList.remove('visible'));
+        item.addEventListener('click', () => navigateTo(url));
+      });
+    }
+
+    renderItems('all');
+
+    /* Filter button clicks */
+    filterBar.addEventListener('click', (e) => {
+      const btn = e.target.closest('.filter-btn');
+      if (!btn) return;
+      activeFilter = btn.dataset.cat;
+      filterBar.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
+      btn.classList.add('active');
+      renderItems(activeFilter);
     });
   }
 
