@@ -103,7 +103,7 @@ function renderFeatured(projects) {
 
   featGrid.innerHTML = featured.map((p, i) => `
     <a class="featured-item reveal reveal-delay-${i % 3}" href="work.html">
-      <img src="${p.cover}" alt="${p.title}" loading="lazy" />
+      <img src="${p.cover}" alt="${p.title}" />
       <div class="featured-overlay">
         <div class="featured-text">
           <div class="featured-title">${p.title}</div>
