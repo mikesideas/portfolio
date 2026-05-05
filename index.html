@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Mike's Ideas — Graphic Design Portfolio</title>
+  <meta name="description" content="Graphic design portfolio of Mike's Ideas — branding, illustration, and visual identity." />
+  <meta property="og:title" content="Mike's Ideas" />
+  <meta property="og:description" content="Graphic design portfolio" />
+  <meta property="og:url" content="https://mikesideas.com" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@700;800&family=Inter:wght@300;400&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+  <!-- Page transition overlay -->
+  <div class="page-transition" id="pageTransition"></div>
+
+  <!-- Cursor preview image (follows mouse on desktop) -->
+  <img id="cursor-preview" src="" alt="" aria-hidden="true" />
+
+  <!-- ─── Header ─── -->
+  <header>
+    <a class="logo" href="index.html">Mike's Ideas</a>
+    <nav>
+      <a href="#work">Work</a>
+      <a href="about.html">About</a>
+      <a href="mailto:hello@mikesideas.com">Contact</a>
+    </nav>
+  </header>
+
+  <!-- ─── Hero ─── -->
+  <section class="hero">
+    <p class="hero-eyebrow">Graphic Design &amp; Visual Identity</p>
+    <h1>Selected<br>Work.</h1>
+  </section>
+
+  <!-- ─── Projects ─── -->
+  <section class="projects-section" id="work">
+    <p class="projects-label">Projects</p>
+    <div id="projects-list">
+      <!-- Injected by app.js -->
+    </div>
+  </section>
+
+  <!-- ─── Footer ─── -->
+  <footer>
+    <span>© <span id="year"></span> Mike's Ideas</span>
+    <div class="footer-links">
+      <a href="https://instagram.com/" target="_blank" rel="noopener">Instagram</a>
+      <a href="https://dribbble.com/" target="_blank" rel="noopener">Dribbble</a>
+      <a href="mailto:hello@mikesideas.com">Email</a>
+    </div>
+  </footer>
+
+  <script src="js/app.js"></script>
+</body>
+</html>

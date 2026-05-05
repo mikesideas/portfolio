@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Project — Mike's Ideas</title>
+  <meta name="description" content="" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@700;800&family=Inter:wght@300;400&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+  <!-- Page transition overlay -->
+  <div class="page-transition active" id="pageTransition"></div>
+
+  <!-- ─── Back Button ─── -->
+  <a class="back-link" href="index.html" id="backLink">
+    <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+      <path d="M10 3L5 8L10 13" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+    </svg>
+    Back
+  </a>
+
+  <!-- ─── Content (injected by app.js) ─── -->
+  <main id="project-content">
+    <!-- Loading state -->
+    <div class="project-hero" style="background:#111;"></div>
+    <div class="project-info">
+      <p style="color:#333;font-size:13px;letter-spacing:0.1em;text-transform:uppercase;">Loading…</p>
+    </div>
+  </main>
+
+  <script src="js/app.js"></script>
+</body>
+</html>

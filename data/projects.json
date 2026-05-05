@@ -1,0 +1,27 @@
+[
+  {
+    "id": "sample-project",
+    "title": "Sample Project",
+    "categories": ["branding", "identity"],
+    "year": "2025",
+    "description": "Replace this with your real project description. Keep it short — one or two sentences that set the context.",
+    "cover": "projects/sample-project/cover.jpg",
+    "images": [
+      "projects/sample-project/01.jpg",
+      "projects/sample-project/02.jpg",
+      "projects/sample-project/03.jpg"
+    ]
+  },
+  {
+    "id": "second-project",
+    "title": "Second Project",
+    "categories": ["illustration", "print"],
+    "year": "2024",
+    "description": "Another project description goes here.",
+    "cover": "projects/second-project/cover.jpg",
+    "images": [
+      "projects/second-project/01.jpg",
+      "projects/second-project/02.jpg"
+    ]
+  }
+]
