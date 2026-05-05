@@ -13,19 +13,6 @@
     ]
   },
   {
-    "id": "websites--pinkfreudusa-com",
-    "title": "Pink Freud USA",
-    "categories": [
-      "websites"
-    ],
-    "year": "2026",
-    "description": "Website design.",
-    "cover": "projects/websites/pinkfreudusa-com/cover.jpg",
-    "images": [
-      "projects/websites/pinkfreudusa-com/cover.jpg"
-    ]
-  },
-  {
     "id": "websites--staymotavated-com",
     "title": "Stay Motavated",
     "categories": [
@@ -52,6 +39,19 @@
     ]
   },
   {
+    "id": "websites--pinkfreudusa-com",
+    "title": "Pink Freud USA",
+    "categories": [
+      "websites"
+    ],
+    "year": "2026",
+    "description": "Website design.",
+    "cover": "projects/websites/pinkfreudusa-com/cover.jpg",
+    "images": [
+      "projects/websites/pinkfreudusa-com/cover.jpg"
+    ]
+  },
+  {
     "id": "websites--lightenthemoment-com",
     "title": "Lighten the Moment",
     "categories": [
@@ -62,6 +62,110 @@
     "cover": "projects/websites/lightenthemoment-com/cover.jpg",
     "images": [
       "projects/websites/lightenthemoment-com/cover.jpg"
+    ]
+  },
+  {
+    "id": "lighting-design--freud 7",
+    "title": "Freud 7",
+    "categories": [
+      "lighting-design"
+    ],
+    "year": "2026",
+    "description": "",
+    "cover": "projects/lighting-design/freud 7.jpg",
+    "images": [
+      "projects/lighting-design/freud 7.jpg"
+    ]
+  },
+  {
+    "id": "lighting-design--freud 8",
+    "title": "Freud 8",
+    "categories": [
+      "lighting-design"
+    ],
+    "year": "2026",
+    "description": "",
+    "cover": "projects/lighting-design/freud 8.jpg",
+    "images": [
+      "projects/lighting-design/freud 8.jpg"
+    ]
+  },
+  {
+    "id": "lighting-design--freud 5",
+    "title": "Freud 5",
+    "categories": [
+      "lighting-design"
+    ],
+    "year": "2026",
+    "description": "",
+    "cover": "projects/lighting-design/freud 5.jpg",
+    "images": [
+      "projects/lighting-design/freud 5.jpg"
+    ]
+  },
+  {
+    "id": "lighting-design--freud 66",
+    "title": "Freud 66",
+    "categories": [
+      "lighting-design"
+    ],
+    "year": "2026",
+    "description": "",
+    "cover": "projects/lighting-design/freud 66.jpg",
+    "images": [
+      "projects/lighting-design/freud 66.jpg"
+    ]
+  },
+  {
+    "id": "lighting-design--freud 3",
+    "title": "Freud 3",
+    "categories": [
+      "lighting-design"
+    ],
+    "year": "2026",
+    "description": "",
+    "cover": "projects/lighting-design/freud 3.jpg",
+    "images": [
+      "projects/lighting-design/freud 3.jpg"
+    ]
+  },
+  {
+    "id": "lighting-design--freud 4",
+    "title": "Freud 4",
+    "categories": [
+      "lighting-design"
+    ],
+    "year": "2026",
+    "description": "",
+    "cover": "projects/lighting-design/freud 4.jpg",
+    "images": [
+      "projects/lighting-design/freud 4.jpg"
+    ]
+  },
+  {
+    "id": "lighting-design--Freud 1",
+    "title": "Freud 1",
+    "categories": [
+      "lighting-design"
+    ],
+    "year": "2026",
+    "description": "",
+    "cover": "projects/lighting-design/Freud 1.jpg",
+    "images": [
+      "projects/lighting-design/Freud 1.jpg"
+    ]
+  },
+  {
+    "id": "lighting-design--freud 2",
+    "title": "Freud 2",
+    "categories": [
+      "lighting-design"
+    ],
+    "year": "2026",
+    "description": "",
+    "cover": "projects/lighting-design/freud 2.jpg",
+    "images": [
+      "projects/lighting-design/freud 2.jpg"
     ]
   },
   {
