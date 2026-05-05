@@ -3,72 +3,73 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Mike's Ideas — Graphic Design Portfolio</title>
+  <title>Mike's Ideas — Graphic Design</title>
   <meta name="description" content="Graphic design portfolio — branding, illustration, and visual identity." />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@600;700;800&family=Inter:wght@300;400;500&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@700;800&family=Inter:wght@300;400;500&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="css/style.css" />
 </head>
 <body>
 
-  <!-- ─── Sidebar ─── -->
-  <aside class="sidebar" id="sidebar">
-    <div class="sidebar-top">
-      <div class="logo">
-        <span class="logo-name">Mike's Ideas</span>
-        <span class="logo-sub">Graphic Design</span>
-      </div>
-
-      <nav class="filter-nav" id="filterNav">
-        <button class="filter-btn active" data-cat="all">All Work</button>
-        <!-- Category buttons injected by app.js -->
-      </nav>
-    </div>
-
-    <div class="sidebar-bottom">
-      <div class="sidebar-links">
-        <a href="about.html">About</a>
-        <a href="mailto:hello@mikesideas.com">Contact</a>
-        <a href="https://instagram.com/" target="_blank" rel="noopener">Instagram</a>
-        <a href="https://dribbble.com/" target="_blank" rel="noopener">Dribbble</a>
-      </div>
-      <p class="sidebar-copy">© <span id="year"></span> Mike's Ideas</p>
-    </div>
-  </aside>
-
-  <!-- ─── Mobile Header ─── -->
-  <header class="mobile-header">
-    <span class="logo-name">Mike's Ideas</span>
-    <button class="menu-toggle" id="menuToggle" aria-label="Menu">
-      <span></span><span></span><span></span>
-    </button>
+  <!-- ─── Header ─── -->
+  <header class="header">
+    <a class="header-logo" href="index.html">Mike's Ideas</a>
+    <nav class="header-nav">
+      <a href="about.html">About</a>
+      <a href="mailto:hello@mikesideas.com">Contact ↗</a>
+    </nav>
   </header>
 
-  <!-- ─── Main Grid ─── -->
-  <main class="main" id="main">
-    <div class="masonry-grid" id="masonryGrid">
-      <!-- Injected by app.js -->
+  <!-- ─── Hero ─── -->
+  <section class="hero">
+    <h1 class="hero-title">
+      <span class="hero-line">Design.</span>
+      <span class="hero-line">Identity.</span>
+      <span class="hero-line hero-muted">Everything Else.</span>
+    </h1>
+    <p class="hero-desc">Graphic design, branding &amp; visual identity.</p>
+  </section>
+
+  <!-- ─── Filter Bar ─── -->
+  <div class="filters" id="filters">
+    <div class="filters-inner" id="filtersInner">
+      <button class="filter-chip active" data-cat="all">All</button>
+      <!-- dynamic -->
     </div>
-    <p class="empty-state" id="emptyState" style="display:none">
-      No projects yet — upload images to a category folder on GitHub.
-    </p>
+  </div>
+
+  <!-- ─── Grid ─── -->
+  <main class="grid" id="grid">
+    <!-- Injected by app.js -->
   </main>
 
+  <p class="empty-state" id="emptyState" style="display:none">
+    No projects yet — upload images to a category folder on GitHub.
+  </p>
+
+  <!-- ─── Footer ─── -->
+  <footer class="footer">
+    <span>© <span id="year"></span> Mike's Ideas</span>
+    <div class="footer-links">
+      <a href="https://instagram.com/" target="_blank" rel="noopener">Instagram ↗</a>
+      <a href="https://dribbble.com/" target="_blank" rel="noopener">Dribbble ↗</a>
+      <a href="mailto:hello@mikesideas.com">hello@mikesideas.com</a>
+    </div>
+  </footer>
+
   <!-- ─── Lightbox ─── -->
-  <div class="lightbox" id="lightbox" role="dialog" aria-modal="true">
-    <button class="lightbox-close" id="lightboxClose" aria-label="Close">✕</button>
-    <button class="lightbox-prev" id="lightboxPrev" aria-label="Previous">‹</button>
-    <button class="lightbox-next" id="lightboxNext" aria-label="Next">›</button>
-    <div class="lightbox-inner">
-      <div class="lightbox-img-wrap">
-        <img class="lightbox-img" id="lightboxImg" src="" alt="" />
-      </div>
-      <div class="lightbox-info">
-        <span class="lightbox-category" id="lightboxCategory"></span>
-        <h2 class="lightbox-title" id="lightboxTitle"></h2>
-        <p class="lightbox-desc" id="lightboxDesc"></p>
-      </div>
+  <div class="lightbox" id="lightbox">
+    <button class="lb-close" id="lbClose">✕</button>
+    <button class="lb-arrow lb-prev" id="lbPrev">&#8592;</button>
+    <button class="lb-arrow lb-next" id="lbNext">&#8594;</button>
+    <div class="lb-stage" id="lbStage">
+      <img class="lb-img" id="lbImg" src="" alt="" />
+    </div>
+    <div class="lb-meta">
+      <span class="lb-cat" id="lbCat"></span>
+      <strong class="lb-title" id="lbTitle"></strong>
+      <span class="lb-desc" id="lbDesc"></span>
     </div>
   </div>
 
