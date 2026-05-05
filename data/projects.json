@@ -1,201 +1,5 @@
 [
   {
-    "id": "lighting-design--freud 8",
-    "title": "Freud 8",
-    "categories": [
-      "lighting-design"
-    ],
-    "categoryLabel": "Lighting Design",
-    "year": "2026",
-    "description": "Lighting concepts & visual setups.",
-    "cover": "projects/lighting-design/freud 8.jpg",
-    "images": [
-      "projects/lighting-design/freud 8.jpg"
-    ]
-  },
-  {
-    "id": "lighting-design--freud 7",
-    "title": "Freud 7",
-    "categories": [
-      "lighting-design"
-    ],
-    "categoryLabel": "Lighting Design",
-    "year": "2026",
-    "description": "Lighting concepts & visual setups.",
-    "cover": "projects/lighting-design/freud 7.jpg",
-    "images": [
-      "projects/lighting-design/freud 7.jpg"
-    ]
-  },
-  {
-    "id": "lighting-design--freud 66",
-    "title": "Freud 66",
-    "categories": [
-      "lighting-design"
-    ],
-    "categoryLabel": "Lighting Design",
-    "year": "2026",
-    "description": "Lighting concepts & visual setups.",
-    "cover": "projects/lighting-design/freud 66.jpg",
-    "images": [
-      "projects/lighting-design/freud 66.jpg"
-    ]
-  },
-  {
-    "id": "lighting-design--freud 5",
-    "title": "Freud 5",
-    "categories": [
-      "lighting-design"
-    ],
-    "categoryLabel": "Lighting Design",
-    "year": "2026",
-    "description": "Lighting concepts & visual setups.",
-    "cover": "projects/lighting-design/freud 5.jpg",
-    "images": [
-      "projects/lighting-design/freud 5.jpg"
-    ]
-  },
-  {
-    "id": "lighting-design--freud 4",
-    "title": "Freud 4",
-    "categories": [
-      "lighting-design"
-    ],
-    "categoryLabel": "Lighting Design",
-    "year": "2026",
-    "description": "Lighting concepts & visual setups.",
-    "cover": "projects/lighting-design/freud 4.jpg",
-    "images": [
-      "projects/lighting-design/freud 4.jpg"
-    ]
-  },
-  {
-    "id": "lighting-design--freud 3",
-    "title": "Freud 3",
-    "categories": [
-      "lighting-design"
-    ],
-    "categoryLabel": "Lighting Design",
-    "year": "2026",
-    "description": "Lighting concepts & visual setups.",
-    "cover": "projects/lighting-design/freud 3.jpg",
-    "images": [
-      "projects/lighting-design/freud 3.jpg"
-    ]
-  },
-  {
-    "id": "lighting-design--freud 2",
-    "title": "Freud 2",
-    "categories": [
-      "lighting-design"
-    ],
-    "categoryLabel": "Lighting Design",
-    "year": "2026",
-    "description": "Lighting concepts & visual setups.",
-    "cover": "projects/lighting-design/freud 2.jpg",
-    "images": [
-      "projects/lighting-design/freud 2.jpg"
-    ]
-  },
-  {
-    "id": "lighting-design--Freud 1",
-    "title": "Freud 1",
-    "categories": [
-      "lighting-design"
-    ],
-    "categoryLabel": "Lighting Design",
-    "year": "2026",
-    "description": "Lighting concepts & visual setups.",
-    "cover": "projects/lighting-design/Freud 1.jpg",
-    "images": [
-      "projects/lighting-design/Freud 1.jpg"
-    ]
-  },
-  {
-    "id": "flyers--Tom Petty KTAOS 1-10-26",
-    "title": "Tom Petty KTAOS 1 10 26",
-    "categories": [
-      "flyers"
-    ],
-    "categoryLabel": "Concert Flyers",
-    "year": "2026",
-    "description": "Event posters & promotional flyers for concerts, shows & festivals.",
-    "cover": "projects/flyers/Tom Petty KTAOS 1-10-26.png",
-    "images": [
-      "projects/flyers/Tom Petty KTAOS 1-10-26.png"
-    ]
-  },
-  {
-    "id": "flyers--Freud Dank Side V1",
-    "title": "Freud Dank Side V1",
-    "categories": [
-      "flyers"
-    ],
-    "categoryLabel": "Concert Flyers",
-    "year": "2026",
-    "description": "Event posters & promotional flyers for concerts, shows & festivals.",
-    "cover": "projects/flyers/Freud Dank Side V1.png",
-    "images": [
-      "projects/flyers/Freud Dank Side V1.png"
-    ]
-  },
-  {
-    "id": "flyers--fleetwood revel",
-    "title": "Fleetwood Revel",
-    "categories": [
-      "flyers"
-    ],
-    "categoryLabel": "Concert Flyers",
-    "year": "2026",
-    "description": "Event posters & promotional flyers for concerts, shows & festivals.",
-    "cover": "projects/flyers/fleetwood revel.png",
-    "images": [
-      "projects/flyers/fleetwood revel.png"
-    ]
-  },
-  {
-    "id": "flyers--Pink Freud Tumbleroot 3-6-26 11x17",
-    "title": "Pink Freud Tumbleroot 3 6 26 11x17",
-    "categories": [
-      "flyers"
-    ],
-    "categoryLabel": "Concert Flyers",
-    "year": "2026",
-    "description": "Event posters & promotional flyers for concerts, shows & festivals.",
-    "cover": "projects/flyers/Pink Freud Tumbleroot 3-6-26 11x17.png",
-    "images": [
-      "projects/flyers/Pink Freud Tumbleroot 3-6-26 11x17.png"
-    ]
-  },
-  {
-    "id": "websites--staymotavated-com",
-    "title": "Stay Motavated",
-    "categories": [
-      "websites"
-    ],
-    "categoryLabel": "Websites",
-    "year": "2026",
-    "description": "Website design.",
-    "cover": "projects/websites/staymotavated-com/cover.png",
-    "images": [
-      "projects/websites/staymotavated-com/cover.png"
-    ]
-  },
-  {
-    "id": "websites--lightenthemoment-com",
-    "title": "Lighten the Moment",
-    "categories": [
-      "websites"
-    ],
-    "categoryLabel": "Websites",
-    "year": "2026",
-    "description": "Website design.",
-    "cover": "projects/websites/lightenthemoment-com/cover.jpg",
-    "images": [
-      "projects/websites/lightenthemoment-com/cover.jpg"
-    ]
-  },
-  {
     "id": "websites--ziathere-com",
     "title": "Zia There",
     "categories": [
@@ -224,6 +28,20 @@
     ]
   },
   {
+    "id": "websites--staymotavated-com",
+    "title": "Stay Motavated",
+    "categories": [
+      "websites"
+    ],
+    "categoryLabel": "Websites",
+    "year": "2026",
+    "description": "Website design.",
+    "cover": "projects/websites/staymotavated-com/cover.png",
+    "images": [
+      "projects/websites/staymotavated-com/cover.png"
+    ]
+  },
+  {
     "id": "websites--n8vmovement-com",
     "title": "N8V Movement",
     "categories": [
@@ -235,6 +53,188 @@
     "cover": "projects/websites/n8vmovement-com/cover.jpg",
     "images": [
       "projects/websites/n8vmovement-com/cover.jpg"
+    ]
+  },
+  {
+    "id": "websites--lightenthemoment-com",
+    "title": "Lighten the Moment",
+    "categories": [
+      "websites"
+    ],
+    "categoryLabel": "Websites",
+    "year": "2026",
+    "description": "Website design.",
+    "cover": "projects/websites/lightenthemoment-com/cover.jpg",
+    "images": [
+      "projects/websites/lightenthemoment-com/cover.jpg"
+    ]
+  },
+  {
+    "id": "lighting-design--freud 7",
+    "title": "Freud 7",
+    "categories": [
+      "lighting-design"
+    ],
+    "categoryLabel": "Lighting Design",
+    "year": "2026",
+    "description": "Lighting concepts & visual setups.",
+    "cover": "projects/lighting-design/freud 7.jpg",
+    "images": [
+      "projects/lighting-design/freud 7.jpg"
+    ]
+  },
+  {
+    "id": "lighting-design--freud 8",
+    "title": "Freud 8",
+    "categories": [
+      "lighting-design"
+    ],
+    "categoryLabel": "Lighting Design",
+    "year": "2026",
+    "description": "Lighting concepts & visual setups.",
+    "cover": "projects/lighting-design/freud 8.jpg",
+    "images": [
+      "projects/lighting-design/freud 8.jpg"
+    ]
+  },
+  {
+    "id": "lighting-design--freud 66",
+    "title": "Freud 66",
+    "categories": [
+      "lighting-design"
+    ],
+    "categoryLabel": "Lighting Design",
+    "year": "2026",
+    "description": "Lighting concepts & visual setups.",
+    "cover": "projects/lighting-design/freud 66.jpg",
+    "images": [
+      "projects/lighting-design/freud 66.jpg"
+    ]
+  },
+  {
+    "id": "lighting-design--freud 4",
+    "title": "Freud 4",
+    "categories": [
+      "lighting-design"
+    ],
+    "categoryLabel": "Lighting Design",
+    "year": "2026",
+    "description": "Lighting concepts & visual setups.",
+    "cover": "projects/lighting-design/freud 4.jpg",
+    "images": [
+      "projects/lighting-design/freud 4.jpg"
+    ]
+  },
+  {
+    "id": "lighting-design--freud 5",
+    "title": "Freud 5",
+    "categories": [
+      "lighting-design"
+    ],
+    "categoryLabel": "Lighting Design",
+    "year": "2026",
+    "description": "Lighting concepts & visual setups.",
+    "cover": "projects/lighting-design/freud 5.jpg",
+    "images": [
+      "projects/lighting-design/freud 5.jpg"
+    ]
+  },
+  {
+    "id": "lighting-design--Freud 1",
+    "title": "Freud 1",
+    "categories": [
+      "lighting-design"
+    ],
+    "categoryLabel": "Lighting Design",
+    "year": "2026",
+    "description": "Lighting concepts & visual setups.",
+    "cover": "projects/lighting-design/Freud 1.jpg",
+    "images": [
+      "projects/lighting-design/Freud 1.jpg"
+    ]
+  },
+  {
+    "id": "lighting-design--freud 2",
+    "title": "Freud 2",
+    "categories": [
+      "lighting-design"
+    ],
+    "categoryLabel": "Lighting Design",
+    "year": "2026",
+    "description": "Lighting concepts & visual setups.",
+    "cover": "projects/lighting-design/freud 2.jpg",
+    "images": [
+      "projects/lighting-design/freud 2.jpg"
+    ]
+  },
+  {
+    "id": "lighting-design--freud 3",
+    "title": "Freud 3",
+    "categories": [
+      "lighting-design"
+    ],
+    "categoryLabel": "Lighting Design",
+    "year": "2026",
+    "description": "Lighting concepts & visual setups.",
+    "cover": "projects/lighting-design/freud 3.jpg",
+    "images": [
+      "projects/lighting-design/freud 3.jpg"
+    ]
+  },
+  {
+    "id": "flyers--fleetwood revel",
+    "title": "Fleetwood Revel",
+    "categories": [
+      "flyers"
+    ],
+    "categoryLabel": "Concert Flyers",
+    "year": "2026",
+    "description": "Event posters & promotional flyers for concerts, shows & festivals.",
+    "cover": "projects/flyers/fleetwood revel.png",
+    "images": [
+      "projects/flyers/fleetwood revel.png"
+    ]
+  },
+  {
+    "id": "flyers--Tom Petty KTAOS 1-10-26",
+    "title": "Tom Petty KTAOS 1 10 26",
+    "categories": [
+      "flyers"
+    ],
+    "categoryLabel": "Concert Flyers",
+    "year": "2026",
+    "description": "Event posters & promotional flyers for concerts, shows & festivals.",
+    "cover": "projects/flyers/Tom Petty KTAOS 1-10-26.png",
+    "images": [
+      "projects/flyers/Tom Petty KTAOS 1-10-26.png"
+    ]
+  },
+  {
+    "id": "flyers--Pink Freud Tumbleroot 3-6-26 11x17",
+    "title": "Pink Freud Tumbleroot 3 6 26 11x17",
+    "categories": [
+      "flyers"
+    ],
+    "categoryLabel": "Concert Flyers",
+    "year": "2026",
+    "description": "Event posters & promotional flyers for concerts, shows & festivals.",
+    "cover": "projects/flyers/Pink Freud Tumbleroot 3-6-26 11x17.png",
+    "images": [
+      "projects/flyers/Pink Freud Tumbleroot 3-6-26 11x17.png"
+    ]
+  },
+  {
+    "id": "flyers--Freud Dank Side V1",
+    "title": "Freud Dank Side V1",
+    "categories": [
+      "flyers"
+    ],
+    "categoryLabel": "Concert Flyers",
+    "year": "2026",
+    "description": "Event posters & promotional flyers for concerts, shows & festivals.",
+    "cover": "projects/flyers/Freud Dank Side V1.png",
+    "images": [
+      "projects/flyers/Freud Dank Side V1.png"
     ]
   }
 ]
