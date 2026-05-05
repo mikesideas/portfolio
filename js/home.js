@@ -134,7 +134,14 @@ function handleCatFilter() {
 }
 
 /* ── loadProjects is defined in app.js ── */
-document.addEventListener('DOMContentLoaded', () => {
+/* Use readyState check so this works whether DOM is already loaded or not */
+function initHome() {
   renderHomepage();
   handleCatFilter();
-});
+}
+
+if (document.readyState === 'loading') {
+  document.addEventListener('DOMContentLoaded', initHome);
+} else {
+  initHome();
+}
