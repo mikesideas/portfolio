@@ -21,6 +21,13 @@ function toTitle(str) {
     .replace(/\b\w/g, c => c.toUpperCase()); // Title Case
 }
 
+function readMeta(folderPath) {
+  try {
+    const raw = fs.readFileSync(path.join(folderPath, 'meta.json'), 'utf8');
+    return JSON.parse(raw);
+  } catch { return {}; }
+}
+
 function isImage(filename) {
   return IMG_EXTS.has(path.extname(filename).toLowerCase());
 }
@@ -56,15 +63,16 @@ for (const category of categories) {
 
       if (!images.length) continue;
 
-      // prefer cover.jpg, otherwise first image alphabetically
+      // prefer cover.jpg/png, otherwise first image alphabetically
       const cover = images.find(f => /^cover\./i.test(f)) || images[0];
+      const meta  = readMeta(itemPath);
 
       projects.push({
         id:          `${category}--${item}`,
-        title:       toTitle(item),
+        title:       meta.title || toTitle(item),
         categories:  [category],
-        year:        new Date(getMtime(path.join(itemPath, cover))).getFullYear().toString(),
-        description: '',
+        year:        meta.year || new Date(getMtime(path.join(itemPath, cover))).getFullYear().toString(),
+        description: meta.description || '',
         cover:       `projects/${category}/${item}/${cover}`,
         images:      images.map(img => `projects/${category}/${item}/${img}`),
         _mtime:      getMtime(path.join(itemPath, cover)),

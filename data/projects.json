@@ -1,1 +1,67 @@
-[]
+[
+  {
+    "id": "websites--staymotavated-com",
+    "title": "Stay Motavated",
+    "categories": [
+      "websites"
+    ],
+    "year": "2026",
+    "description": "Website design.",
+    "cover": "projects/websites/staymotavated-com/cover.png",
+    "images": [
+      "projects/websites/staymotavated-com/cover.png"
+    ]
+  },
+  {
+    "id": "websites--lightenthemoment-com",
+    "title": "Lighten the Moment",
+    "categories": [
+      "websites"
+    ],
+    "year": "2026",
+    "description": "Website design.",
+    "cover": "projects/websites/lightenthemoment-com/cover.jpg",
+    "images": [
+      "projects/websites/lightenthemoment-com/cover.jpg"
+    ]
+  },
+  {
+    "id": "websites--ziathere-com",
+    "title": "Zia There",
+    "categories": [
+      "websites"
+    ],
+    "year": "2026",
+    "description": "Website design.",
+    "cover": "projects/websites/ziathere-com/cover.jpg",
+    "images": [
+      "projects/websites/ziathere-com/cover.jpg"
+    ]
+  },
+  {
+    "id": "websites--pinkfreudusa-com",
+    "title": "Pink Freud USA",
+    "categories": [
+      "websites"
+    ],
+    "year": "2026",
+    "description": "Website design.",
+    "cover": "projects/websites/pinkfreudusa-com/cover.jpg",
+    "images": [
+      "projects/websites/pinkfreudusa-com/cover.jpg"
+    ]
+  },
+  {
+    "id": "websites--n8vmovement-com",
+    "title": "N8V Movement",
+    "categories": [
+      "websites"
+    ],
+    "year": "2026",
+    "description": "Website design.",
+    "cover": "projects/websites/n8vmovement-com/cover.jpg",
+    "images": [
+      "projects/websites/n8vmovement-com/cover.jpg"
+    ]
+  }
+]
