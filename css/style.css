@@ -1200,16 +1200,15 @@ button { cursor: pointer; border: none; background: none; font: inherit; color: 
   .nav-hamburger { display: flex; }
 
   /* Fix text overflow on mobile */
-  * { word-break: break-word; }
+  .hero-title { font-size: clamp(36px, 11vw, 72px); overflow: hidden; }
+  .hero-title span { white-space: nowrap; overflow: hidden; text-overflow: clip; }
+  .page-title { font-size: clamp(36px, 11vw, 72px); overflow: hidden; }
+  .about-hero-title { font-size: clamp(36px, 11vw, 72px); overflow: hidden; }
+  .contact-hero-title { font-size: clamp(36px, 11vw, 72px); overflow: hidden; }
+  .contact-email { font-size: clamp(15px, 4.5vw, 26px); word-break: break-all; }
+  .section-title { font-size: clamp(26px, 7vw, 44px); }
 
-  .hero-title { font-size: clamp(52px, 16vw, 100px); }
-  .page-title { font-size: clamp(40px, 14vw, 80px); overflow: hidden; }
-  .about-hero-title { font-size: clamp(40px, 14vw, 80px); }
-  .contact-hero-title { font-size: clamp(40px, 14vw, 80px); }
-  .contact-email { font-size: clamp(16px, 5vw, 28px); word-break: break-all; }
-  .section-title { font-size: clamp(28px, 8vw, 48px); }
-
-  .hero { padding-bottom: 60px; min-height: auto; padding-top: calc(var(--nav-h) + 40px); }
+  .hero { padding-bottom: 60px; min-height: auto; padding-top: calc(var(--nav-h) + 40px); overflow: hidden; }
   .hero-bottom { flex-direction: column; align-items: flex-start; gap: 24px; }
 
   .cat-grid { grid-template-columns: 1fr; }

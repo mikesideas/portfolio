@@ -30,10 +30,14 @@ document.querySelectorAll('.reveal').forEach(el => revealObserver.observe(el));
 /* ── Load projects.json ── */
 async function loadProjects() {
   try {
-    const r = await fetch('data/projects.json?v=' + Date.now());
-    if (!r.ok) throw new Error();
-    return await r.json();
-  } catch { return []; }
+    const r = await fetch('data/projects.json', { cache: 'no-store' });
+    if (!r.ok) throw new Error('HTTP ' + r.status);
+    const data = await r.json();
+    return Array.isArray(data) ? data : [];
+  } catch (e) {
+    console.warn('Portfolio: could not load projects.json —', e.message);
+    return [];
+  }
 }
 
 /* ── Lazy image observer ── */
